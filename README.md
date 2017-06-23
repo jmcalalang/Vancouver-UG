@@ -9,9 +9,9 @@
 This will launch a SNOPS container variant with Ansible installed and a local Repo Mapped
 * SNOPS: https://github.com/f5devcentral/f5-super-netops-container
 * Ansible MVP: https://github.com/jmcalalang/ansible_f5
-* Make sure you are changing the path to your own local copy of user_repos.json in the docker run command below
+* Make sure you are changing the path to your own local copy of [user_repos.json](https://github.com/jmcalalang/ansible_f5/blob/master/misc/user_repos.json) in the docker run command below
 
-```docker run -p 8080:80 -p 2222:22 --rm -it -v "/Volumes/JC Drive/GitHub Repository/ansible_f5/misc/user_repos.json:/tmp/user_repos.json" -e SNOPS_GH_BRANCH=develop f5devcentral/f5-super-netops-container:develop-ansible```
+```docker run -p 8080:80 -p 2222:22 --rm -it -v "/your_local_directory_path_to/ansible_f5/misc/user_repos.json:/tmp/user_repos.json" -e SNOPS_GH_BRANCH=develop f5devcentral/f5-super-netops-container:develop-ansible```
 
 ## Jenkins Server
 There is a Jenkins container that you can run from here until the f5-super-netops-container variant with Jenkins is complete
