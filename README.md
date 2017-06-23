@@ -1,16 +1,24 @@
 # This Readme is a workflow of the DevOps Presentation
 
+## Important Links
+* F5 Automation Lab - https://github.com/f5devcentral/f5-automation-labs
+* https://github.com/f5devcentral
+* https://github.com/f5networks
+
 ## Ansible Image with local Repo
 This will launch a SNOPS container variant with Ansible installed and a local Repo Mapped
-SNOPS:https://github.com/f5devcentral/f5-super-netops-container
-Ansible MVP:https://github.com/jmcalalang/ansible_f5
+* SNOPS: https://github.com/f5devcentral/f5-super-netops-container
+* Ansible MVP: https://github.com/jmcalalang/ansible_f5
+* Make sure you are changing the path to your own local copy of user_repos.json in the docker run command below
 
 ```docker run -p 8080:80 -p 2222:22 --rm -it -v "/Volumes/JC Drive/GitHub Repository/ansible_f5/misc/user_repos.json:/tmp/user_repos.json" -e SNOPS_GH_BRANCH=develop f5devcentral/f5-super-netops-container:develop-ansible```
 
 ## Jenkins Server
-Login to Jenkins Server and Start
+There is a Jenkins container that you can run from here until the f5-super-netops-container variant with Jenkins is complete
+* https://github.com/buulam/jenkins-docker-pip
+* https://hub.docker.com/r/buulam/jenkins-docker-pip/
 
-```java -jar jenkins.war```
+
 
 ## f5_chatbot
 Chatbot is a ChatOps solution working with F5 iWorkflow, Hubot and Slack
